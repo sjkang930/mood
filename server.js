@@ -32,7 +32,7 @@ app.use(express.static(disPath));
 app.get("*", (req, res) => {
     res.sendFile(path.join(disPath, "index.html"));
 })
-const port = process.env.PROT || 8080
+const port = process.env.PORT || 8080
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
